@@ -21,7 +21,12 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                sh 'mvn -s settings.xml -DskipTests install'
+                script {
+                    // Set enviroment variable for Maven build
+                    env.MAVEN_OPTS = "-Dmaven.repo.local=$WORKSPACE/.m2/repository"
+                    // Execute Maven build                
+                    sh 'mvn -s settings.xml -DskipTests install'
+                }
             }
         }
     }
