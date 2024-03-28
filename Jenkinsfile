@@ -51,9 +51,7 @@ pipeline {
             }
         }
         stage('Sonar Analysis') {
-            evniroment{
-                scannerHome = tools "${SONARSCANNER}"
-            }
+    
             steps {
                 withSonarQubeEnv("${SONARSERVER}") {
                    sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=khalidpro \
