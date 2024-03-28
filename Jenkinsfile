@@ -46,6 +46,10 @@ pipeline {
             
         }
         stage('Checkstyle Analysis'){
+             environment {
+                scannerHome = tool "${SONARSCANNER}"
+            }
+
             steps {
                 sh 'mvn -s settings.xml checkstyle:checkstyle'
             }
