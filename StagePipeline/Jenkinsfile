@@ -12,8 +12,8 @@ pipeline {
         NEXUS_PASS = 'admin123'
         RELEASE_REPO = 'khalidpro-release'
         CENTRAL_REPO = 'khalidpro-maven-central'
-        NEXUSIP      = '172.31.23.9'
-        NEXUSPORT    = '8081'
+        NEXUS_IP      = '172.31.23.9'
+        NEXUS_PORT    = '8081'
         NEXUS_GRP_REPO = 'khalidpro-maven-group'
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER = 'sonarserver'
@@ -101,7 +101,7 @@ pipeline {
                 nexusArtifactUploader(
                   nexusVersion: 'nexus3',
                   protocol: 'http',
-                  nexusUrl: "${NEXUSIP}:${NEXUSPORT}",                                                                                                                                                                                 IP}:${NEXUSPORT}",
+                  nexusUrl: "${NEXUS_IP}:${NEXUS_PORT}",                                                                                                                                                                                 IP}:${NEXUSPORT}",
                   groupId: 'QA',
                   version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
                   repository: "${RELEASE_REPO}",
