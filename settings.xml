@@ -11,8 +11,8 @@
     </server>
     <server>
       <id>${RELEASE-REPO}</id>
-      <username>${NEXUS-USER}</username>
-      <password>${NEXUS-PASS}</password>
+      <username>${NEXUS_USER}</username>
+      <password>${NEXUS_PASS}</password>
     </server>
         <server>
         <id>${CENTRAL_REPO}</id>
@@ -28,8 +28,8 @@
 
   <mirrors>
     <mirror>
-      <id>${CENTRAL-REPO}</id>
-      <name>${CENTRAL-REPO}</name>
+      <id>${CENTRAL_REPO}</id>
+      <name>${CENTRAL_REPO}</name>
       <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS_GRP_REPO}/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
