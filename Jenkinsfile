@@ -6,14 +6,14 @@ pipeline {
     }
      
     environment {
-        SNAP_REPO = 'khalidpro-snapshort'
+        SNAP_REPO = 'chicken-snapshot'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin123'
-        RELEASE_REPO = 'khalidpro-release'
-        CENTRAL_REPO = 'khalidpro-maven-central'
+        RELEASE_REPO = 'chicken-release'
+        CENTRAL_REPO = 'chicken-maven-central'
         NEXUSIP      = '172.31.23.9'
         NEXUSPORT    = '8081'
-        NEXUS_GRP_REPO = 'khalidpro-maven-group'
+        NEXUS_GRP_REPO = 'chicken-maven-group'
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER = 'sonarserver'
         SONARSCANNER = 'sonarscanner'
