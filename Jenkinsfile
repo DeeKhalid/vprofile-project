@@ -1,19 +1,19 @@
 pipeline {
     agent any 
     tools {
-        maven "Maven3"
+        maven "MAVEN3"
         jdk "OracleJDK8"
     }
      
     environment {
-        SNAP_REPO = 'chicken-snapshot'
+        SNAP_REPO = 'costa-snapshot'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin123'
-        RELEASE_REPO = 'chicken-release'
-        CENTRAL_REPO = 'chicken-maven-central'
-        NEXUSIP      = '172.31.23.9'
+        RELEASE_REPO = 'costa-release'
+        CENTRAL_REPO = 'costa-maven-central'
+        NEXUSIP      = '172.31.24.198'
         NEXUSPORT    = '8081'
-        NEXUS_GRP_REPO = 'chicken-maven-group'
+        NEXUS_GRP_REPO = 'costa-maven-group'
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER = 'sonarserver'
         SONARSCANNER = 'sonarscanner'
